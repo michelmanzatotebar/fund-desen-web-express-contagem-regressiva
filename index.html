@@ -1,13 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
-
+<html class="no-js" lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Contagem Regressiva</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
-
+  <meta name="description" content="Aplicacao de contagem regressiva.">
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
@@ -23,11 +22,51 @@
 </head>
 
 <body>
+  <div class="d-flex flex-column min-vh-100">
+    <main id="tela-contagem-regressiva" class="d-flex flex-column flex-grow-1 justify-content-center bg-light">
+      <section class="container-fluid text-center px-3 px-lg-5 py-3 py-lg-2">
+        <div class="bg-body-tertiary rounded-1 p-3 p-lg-4 mb-3">
+          <h1 class="display-5 fw-bold mb-2 mb-md-3">Contagem Regressiva</h1>
+          <p class="fs-5 text-body-secondary mb-0">
+            Esta aplica&ccedil;&atilde;o recupera de um Web Service a data do dia dos namorados (12/06),
+            e ent&atilde;o exibe uma contagem regressiva.
+          </p>
+          <p class="fs-6 text-body-secondary mb-0 fst-italic">
+            Para testes, foi liberado o bot&atilde;o "Avan&ccedil;ar no tempo"
+          </p>
+        </div>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div id="contador" class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-0 mx-auto border" aria-live="polite">
+          <div class="col">
+            <strong id="dias" class="contador-valor d-flex align-items-center justify-content-center bg-dark text-light border-bottom py-3 py-md-4 px-3 fs-4 fw-normal">0</strong>
+            <span class="d-flex align-items-center justify-content-center bg-white border-bottom py-3 py-md-4 px-3 fs-5">dias</span>
+          </div>
+          <div class="col">
+            <strong id="horas" class="contador-valor d-flex align-items-center justify-content-center bg-dark text-light border-bottom py-3 py-md-4 px-3 fs-4 fw-normal">0</strong>
+            <span class="d-flex align-items-center justify-content-center bg-white border-bottom py-3 py-md-4 px-3 fs-5">horas</span>
+          </div>
+          <div class="col">
+            <strong id="minutos" class="contador-valor d-flex align-items-center justify-content-center bg-dark text-light border-bottom py-3 py-md-4 px-3 fs-4 fw-normal">0</strong>
+            <span class="d-flex align-items-center justify-content-center bg-white border-bottom py-3 py-md-4 px-3 fs-5">minutos</span>
+          </div>
+          <div class="col">
+            <strong id="segundos" class="contador-valor d-flex align-items-center justify-content-center bg-dark text-light border-bottom py-3 py-md-4 px-3 fs-4 fw-normal">0</strong>
+            <span class="d-flex align-items-center justify-content-center bg-white border-bottom py-3 py-md-4 px-3 fs-5">segundos</span>
+          </div>
+        </div>
+
+        <button id="botao-avancar-tempo" type="button" class="btn btn-primary mt-3 mt-md-4">
+          Avan&ccedil;ar no tempo (para testes)
+        </button>
+      </section>
+    </main>
+
+    <footer class="text-center p-2 bg-secondary bg-opacity-10 fst-italic text-black text-opacity-50">
+      Copyright &copy; 2026 Michel Manzato Tebar UTFPR
+    </footer>
+  </div>
+
   <script src="js/app.js"></script>
-
 </body>
 
 </html>
